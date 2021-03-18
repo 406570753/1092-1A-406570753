@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 15px solid #bdc3c7;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.date {
+  color: #cac83b;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 20px 0;
+}
+
+.post h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1870a3;
+  padding-bottom: 1rem;
+}
+
+.post .quote {
+  border-left: 5px solid #bdc3c7;
+  padding-left: 8px;
+}
+
+.post-info {
+  margin-top: 1rem;
+}
+
+.post {
+  margin-bottom: 1rem;
+}
