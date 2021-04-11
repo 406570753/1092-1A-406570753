@@ -1,0 +1,118 @@
+:root {
+  --main-padding: 8px;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.4fr 1.2fr;
+  grid-template-rows: 0.4fr 1fr 0.6fr;
+  grid-template-areas:
+    "logo header"
+    "article aside"
+    "footer footer";
+  grid-gap: 0.5px;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#logo {
+  background: rgb(255, 187, 138);
+  grid-area: logo;
+  padding-top: var(--main-padding);
+  border: solid 5px rgb(29, 48, 83);
+}
+
+#header {
+  background: rgb(132, 255, 159);
+  grid-area: header;
+  padding-top: var(--main-padding);
+  border: solid 5px rgb(29, 48, 83);
+}
+
+#article {
+  background: rgb(145, 175, 240);
+  grid-area: article;
+  padding-top: var(--main-padding);
+  padding-right: 20px;
+  padding-left: 20px;
+  border: solid 5px rgb(0, 105, 35);
+}
+
+#article ul {
+  background: rgb(183, 226, 255);
+  grid-area: nav;
+  list-style: none;
+  padding-bottom: 150%;
+}
+
+#article li {
+  padding: 1rem 4rem 1rem 1rem;
+}
+
+#aside {
+  background: rgb(203, 135, 230);
+  grid-area: aside;
+  padding-top: var(--main-padding);
+  padding-right: 20px;
+  padding-left: 20px;
+  border: solid 5px rgb(0, 105, 35);
+}
+
+#section {
+  background: rgb(252, 225, 76);
+  grid-area: section;
+  padding-top: var(--main-padding);
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 2fr;
+}
+
+#display {
+  background: rgb(129, 219, 152);
+  grid-area: display;
+  padding-top: var(--main-padding);
+  padding-bottom: 70%;
+}
+
+#video {
+  background: rgba(214, 52, 52, 0.37);
+  grid-area: video;
+  padding-right: 12%;
+}
+
+#video ul {
+  display: flex;
+  list-style: none;
+}
+
+#video li {
+  padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+#video li img {
+  width: 180%;
+}
+
+footer {
+  background: rgb(255, 183, 219);
+  grid-area: footer;
+  padding-top: var(--main-padding);
+  border: solid 6px rgb(174, 174, 255);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1fr 1fr 0.6fr;
+    grid-template-areas:
+      "logo"
+      "header"
+      "article"
+      "aside"
+      "footer";
+  }
+}

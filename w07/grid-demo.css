@@ -1,0 +1,70 @@
+.body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+nav {
+  background: #ffe65b;
+  grid-area: nav;
+}
+
+main {
+  background: #4fd693;
+  grid-area: main;
+}
+
+#sidebar {
+  background: #4cccdd;
+  grid-area: sidebar;
+}
+
+#content1 {
+  background: #ffbf9ae3;
+  grid-area: content1;
+}
+
+#content2 {
+  background: #ffa074;
+  grid-area: content2;
+}
+
+#content3 {
+  background: #fc881cd7;
+  grid-area: content3;
+}
+
+footer {
+  background: #9861fd;
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
